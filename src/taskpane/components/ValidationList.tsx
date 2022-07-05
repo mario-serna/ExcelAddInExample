@@ -160,7 +160,7 @@ export const ValidationList: React.FunctionComponent<Props> = ({ children, title
   const render = () => {
     if (selectedItem === -1) {
       return <ValidationConfig update={updateItem} back={() => setSelectedItem(null)}>
-        <DefaultButton text="Regresar" onClick={() => setSelectedItem(null)} style={{ marginBottom: 10 }} iconProps={{ iconName: "Back" }} allowDisabledFocus />
+        <DefaultButton text="Regresar" onClick={() => setSelectedItem(null)} style={{ alignSelf: "flex-start", marginBottom: 10 }} iconProps={{ iconName: "Back" }} allowDisabledFocus />
       </ValidationConfig>
     }
 

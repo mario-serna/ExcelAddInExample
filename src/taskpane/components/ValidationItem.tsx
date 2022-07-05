@@ -38,7 +38,7 @@ export const ValidationItem: React.FunctionComponent<Props> = ({
   }
 
   return <DocumentCard
-    styles={{ root: { maxWidth: "100%" } }}
+    styles={{ root: { maxWidth: "100%", width: "100%" } }}
     aria-label="Document Card with icon. View and share files. Created by Aaron Reid a few minutes ago"
     type={DocumentCardType.compact}
     onClick={() => {
