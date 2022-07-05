@@ -1,8 +1,9 @@
 import * as React from "react";
-import { DefaultButton } from "@fluentui/react";
-import Header from "./Header";
-import HeroList, { HeroListItem } from "./HeroList";
+// import Header from "./Header";
+// import HeroList, { HeroListItem } from "./HeroList";
 import Progress from "./Progress";
+import { ValidationList } from "./ValidationList";
+import { Item } from "./ValidationItem";
 
 /* global console, Excel, require  */
 
@@ -11,26 +12,7 @@ export interface AppProps {
   isOfficeInitialized: boolean;
 }
 
-export interface AppState {
-  listItems: HeroListItem[];
-}
-
 const App: React.FC<AppProps> = ({ title, isOfficeInitialized }) => {
-
-  const [listItems, setListItems] = React.useState([
-    {
-      icon: "Ribbon",
-      primaryText: "Achieve more with Office integration",
-    },
-    {
-      icon: "Unlock",
-      primaryText: "Unlock features and functionality",
-    },
-    {
-      icon: "Design",
-      primaryText: "Create and visualize like a pro",
-    },
-  ]);
 
   const click = async () => {
     try {
@@ -129,7 +111,7 @@ const App: React.FC<AppProps> = ({ title, isOfficeInitialized }) => {
 
     return (
       <div className="ms-welcome">
-        <Header logo={require("./../../../assets/logo-filled.png")} title={title} message="Welcome" />
+        {/* <Header logo={require("./../../../assets/logo-filled.png")} title={title} message="Welcome" />
         <HeroList message="Discover what Office Add-ins can do for you today!" items={listItems}>
           <p className="ms-font-l">
             Modify the source files, then click <b>Run</b>.
@@ -140,7 +122,9 @@ const App: React.FC<AppProps> = ({ title, isOfficeInitialized }) => {
           <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={createParamsWorksheet}>
             Add Params
           </DefaultButton>
-        </HeroList>
+        </HeroList> */}
+
+        <ValidationList title="Mis Validaciones" />
       </div>
     );
   }
